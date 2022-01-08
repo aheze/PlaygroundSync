@@ -22,10 +22,6 @@ class ShareViewController: UIViewController {
     }
 }
 
-//extension ShareViewController: NSExtensionRequestHandling {
-//
-//}
-
 extension UIViewController {
     func addChildViewController(_ childViewController: UIViewController, in inView: UIView) {
         /// Add Child View Controller

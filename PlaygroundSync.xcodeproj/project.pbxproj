@@ -13,6 +13,8 @@
 		3C989E102789F04800C60A54 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C989E0F2789F04800C60A54 /* ShareViewController.swift */; };
 		3C989E172789F04800C60A54 /* PlaygroundSyncShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3C989E0D2789F04800C60A54 /* PlaygroundSyncShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3C989E1D2789F08A00C60A54 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C989E1C2789F08A00C60A54 /* ShareView.swift */; };
+		3C989E202789F87D00C60A54 /* OctoKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3C989E1F2789F87D00C60A54 /* OctoKit */; };
+		3C989E222789F93500C60A54 /* Token in Resources */ = {isa = PBXBuildFile; fileRef = 3C989E212789F93500C60A54 /* Token */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 		3C989E0F2789F04800C60A54 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		3C989E142789F04800C60A54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C989E1C2789F08A00C60A54 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		3C989E212789F93500C60A54 /* Token */ = {isa = PBXFileReference; lastKnownFileType = text; path = Token; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C989E202789F87D00C60A54 /* OctoKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +105,7 @@
 			children = (
 				3C989E0F2789F04800C60A54 /* ShareViewController.swift */,
 				3C989E1C2789F08A00C60A54 /* ShareView.swift */,
+				3C989E212789F93500C60A54 /* Token */,
 				3C989E142789F04800C60A54 /* Info.plist */,
 			);
 			path = PlaygroundSyncShare;
@@ -141,6 +146,9 @@
 			dependencies = (
 			);
 			name = PlaygroundSyncShare;
+			packageProductDependencies = (
+				3C989E1F2789F87D00C60A54 /* OctoKit */,
+			);
 			productName = PlaygroundSyncShare;
 			productReference = 3C989E0D2789F04800C60A54 /* PlaygroundSyncShare.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -172,6 +180,9 @@
 				Base,
 			);
 			mainGroup = 3C989DEF2789EF3B00C60A54;
+			packageReferences = (
+				3C989E1E2789F87D00C60A54 /* XCRemoteSwiftPackageReference "octokit" */,
+			);
 			productRefGroup = 3C989DF92789EF3B00C60A54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C989E222789F93500C60A54 /* Token in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +499,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C989E1E2789F87D00C60A54 /* XCRemoteSwiftPackageReference "octokit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nerdishbynature/octokit.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C989E1F2789F87D00C60A54 /* OctoKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C989E1E2789F87D00C60A54 /* XCRemoteSwiftPackageReference "octokit" */;
+			productName = OctoKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C989DF02789EF3B00C60A54 /* Project object */;
 }
