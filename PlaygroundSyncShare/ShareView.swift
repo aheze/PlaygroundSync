@@ -10,6 +10,7 @@
 import SwiftUI
 
 struct ShareView: View {
+    @StateObject var model = ShareViewModel()
     var body: some View {
         Text("Hi!")
     }
